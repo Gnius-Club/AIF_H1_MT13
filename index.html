@@ -1,22 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook — 1º Preparatoria — Misión M13 - Self Critique and Chain of Refinement</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-Prep1-TM13</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Misión M13: Self Critique and Chain of Refinement</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 13 - 1o de Preparatoria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -39,240 +38,408 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-            <div class="sidebar-info">
-                <p>💡 Esta misión se enfoca en la mejora iterativa de contenidos usando IA.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-            <section class="activity-card" id="activity-0">
-                <h2 class="activity-title">📝 De un Vistazo: Misión M13 - Self Critique and Chain of Refinement</h2>
-                <p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
-                <div class="overview">
-                    <section class="overview-block">
-                        <h3>Objetivos e “I Can”</h3>
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> Usar plataformas de IA para aplicar encadenamiento de prompts y refinamiento iterativo para mejorar la calidad de contenidos y comprender el rol del humano como editor responsable.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame cómo funciona el ciclo Crear → Criticar → Refinar y por qué mejora la calidad frente a una sola generación. Analicemos la importancia de definir criterios claros para la crítica y guíame para transformar comentarios en mejoras concretas.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Edición Iterativa: El proceso de revisar y mejorar un trabajo varias veces, usando críticas constructivas para elevar la calidad final.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar herramientas de IA para refinar contenidos mediante críticas estructuradas y encadenamiento de prompts.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes niveles de exigencia en los criterios de crítica para observar cómo cambia el resultado.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Dispositivos con acceso a internet (1 por estudiante)</label>
+                        <label><input type="checkbox"> Acceso a ChatGPT (https://chatgpt.com/), Gemini (https://gemini.google.com/) o Claude (https://claude.ai/)</label>
+                        <label><input type="checkbox"> Borradores de texto para procesar</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa interacción con Modelos de Lenguaje (LLM)</label>
+                        <label><input type="checkbox"> 📋 No se requieren extensiones; se trabaja directamente en la web de la IA elegida.</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Mantener la seguridad de las cuentas personales y cerrar sesión en las plataformas de IA al finalizar.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre el ciclo Crear → Criticar → Refinar (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
                         <ul>
-                            <li>Puedo aplicar el ciclo Crear -> Criticar -> Refinar utilizando prompts encadenados con IA.</li>
-                            <li>Puedo mejorar la calidad de un borrador (texto, idea, plan) al pedir a la IA que actúe como editor.</li>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si la IA se vuelve repetitiva:</strong> Cambia el enfoque de la crítica o pide a XOLO un nuevo ángulo de revisión.</li>
+                            <li><strong>Si el texto pierde tu "voz" original:</strong> Ajusta los criterios para priorizar el estilo personal sobre la corrección gramatical extrema.</li>
+                            <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
                         </ul>
-                    </section>
-                    <section class="overview-block">
-                        <h3>Secuencia y tiempos</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
+            <div class="activity-card" id="activity-1">
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy se convertirán en los editores jefes de su propia Inteligencia Artificial.".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre el ciclo de refinamiento iterativo.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A dominar el ciclo de refinamiento para que sus creaciones pasen de buenas a excelentes.</p>
+                        <p><strong>Aplicación real:</strong> Los editores profesionales usan procesos iterativos para asegurar que los textos sean precisos, claros y efectivos.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 2: A.I. GYM -->
+            <div class="activity-card" id="activity-2">
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo el encadenamiento de prompts permite mejoras granulares.</li>
+                            <li>Introduce el concepto de metacognición en el proceso editorial.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar la IA para generar críticas constructivas sobre un texto.</li>
+                            <li>Aprender sobre la importancia de la supervisión humana en la IA.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
+                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar la IA para iterar y comprender el ciclo de mejora continua.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Hoy vamos a descubrir un secreto de los expertos: la IA no siempre da el mejor resultado a la primera. Vamos a aprender el ciclo Crear, Criticar y Refinar. Abran su chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él sobre cómo mejorar lo que la IA genera. Él les explicará por qué ser un buen editor es más importante que solo saber pedir cosas. ¡Pregúntenle todo lo que necesiten!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
+            <div class="activity-card" id="activity-3">
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los plataformas de IA conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique el refinamiento iterativo.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para su Sala de Edición IA.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Comparar las versiones inicial, crítica y refinada y evaluar los cambios.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a crear mi Sala de Edición IA: acompáñame a elegir un borrador, definir 3–4 criterios de calidad y pedir una crítica estructurada. Luego guíame para generar una versión refinada basada en esa crítica. Ejecuta: entrega las tres versiones (inicial, crítica y refinada) y una reflexión breve sobre los cambios realizados."</pre>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El resultado final es notablemente superior al borrador inicial?</li>
+                            <li>¿Qué sucede si cambias uno de los criterios de calidad a mitad del proceso?</li>
+                            <li>¿La IA aceptó todas tus críticas o hubo alguna que no pudo procesar bien?</li>
+                            <li>¿Cómo ayuda este proceso a desarrollar tu propia capacidad de mejora continua y autocrítica?</li>
+                            <li>¿Por qué el rol del humano como editor final es indispensable para garantizar la veracidad y el tono?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear su propia Sala de Edición! Vamos a tomar un borrador y lo pasaremos por un proceso riguroso de mejora. Primero ideen con XOLO, definan sus criterios de calidad y pidan esa crítica estructurada. El flujo es: elegir borrador → definir VIBE → obtener GCS de edición → aplicar en su plataforma de IA → experimentar con los cambios. Por ejemplo, podrían mejorar un ensayo escolar o el guion de un video. Al final, comparen sus versiones. Si tienen errores o dudas sobre cómo aplicar una sugerencia, pregúntenle a XOLO, él los ayudará a depurar su proceso editorial.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con el refinamiento básico. ¿Puedes enseñarme cómo hacer que mi IA actúe como un editor experto en estilo académico para pulir mi lenguaje técnico?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué criterios de edición funcionaron mejor.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué criterios de calidad mejoraron mejor tu contenido? ¿Qué te sorprendió del proceso?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi IA mejoró los criterios de claridad y coherencia. Me sorprendió que el refinamiento cambiara tanto el impacto del mensaje."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
                         <ol>
-                            <li>Saludo Interactivo con IA — 3 min</li>
-                            <li>“I Can” + Desafío — 5–7 min</li>
-                            <li>AI GYM — 10–12 min</li>
-                            <li>Brain Spark — 17–20 min</li>
-                            <li>GNIUS STORM — 5 min</li>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
                         </ol>
-                    </section>
-                    <section class="overview-block">
-                        <h3>Entregable del Micro-Proyecto</h3>
-                        <ul>
-                            <li>Un documento o artefacto (ensayo, trama, plan de empresa) refinado, mostrando el proceso de crítica y reescritura asistido por IA.</li>
-                        </ul>
-                    </section>
-                    <section class="overview-block">
-                        <h3>Criterios de calidad</h3>
-                        <ul>
-                            <li>Claridad y coherencia del borrador inicial.</li>
-                            <li>Eficacia de los prompts de crítica y refinamiento.</li>
-                            <li>Mejora observable en la calidad del resultado final.</li>
-                            <li>Evidencia del ciclo iterativo (borrador, crítica de IA, versión refinada).</li>
-                        </ul>
-                    </section>
-                    <section class="overview-block">
-                        <h3>Materiales y preparación</h3>
-                        <ul>
-                            <li>Proyector e internet</li>
-                            <li>Acceso a LLM (ej. ChatGPT, Gemini, Claude)</li>
-                            <li>Editor de texto digital (ej. Google Docs, Word Online)</li>
-                            <li>Plantilla de ejemplo de un borrador simple y su versión refinada.</li>
-                            <li>Familiarizarse con la formulación de prompts de crítica.</li>
-                        </ul>
-                    </section>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                    </div>
                 </div>
-            </section>
-            <section class="activity-card" id="activity-1">
-                <h2 class="activity-title">Saludo Interactivo con IA</h2>
-                <p class="activity-purpose">Establecer tono profesional, conectar con el tema y activar a Xolo con perfil+intereses.</p>
-                <div class="steps">
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 2. Enuncia el foco conceptual y su relevancia profesional.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Equipo: hoy abordaremos la mejora continua de la producción intelectual. Aprenderemos a utilizar la inteligencia artificial no solo como generador, sino como un socio crítico para refinar ideas, textos o planes. El objetivo es que sus entregables alcancen un nivel superior de calidad mediante un proceso iterativo de edición asistida por IA.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
-                            <p class="step-instructions">Cada estudiante abre su chat con Xolo y envía saludo con perfil de aprendizaje e intereses + referencia a la misión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Envíen un mensaje como: "Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Estoy en la Misión M13 - Self Critique and Chain of Refinement." Confirmen que comprendieron los criterios de hoy y sigan sus indicaciones personalizadas.</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="activity-card" id="activity-2">
-                <h2 class="activity-title">“I Can Statement” + Desafío</h2>
-                <p class="activity-purpose">Explicitar metas y presentar el reto que guiará la producción.</p>
-                <div class="steps">
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 1 — Presentación del reto</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 3. Define qué se logrará hoy.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">El reto de esta sesión es transformar un borrador inicial en un producto refinado. Utilizaremos la IA como un editor crítico, encadenando prompts para guiarla a través de un proceso de mejora iterativa. El éxito se medirá por la mejora observable en la calidad del resultado final y la evidencia de su proceso de refinamiento.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 2 — Afirmación “I Can”</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1–2 “I Can” concretos alineados con el Micro-Proyecto.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Es momento de internalizar el objetivo. Formulen su "I Can Statement" individual. Por ejemplo: "Puedo generar un borrador, pedir a la IA que lo critique, y luego que lo reescriba para mejorar su calidad." Tomen un minuto para redactar su propia afirmación.</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="activity-card" id="activity-3">
-                <h2 class="activity-title">AI GYM</h2>
-                <p class="activity-purpose">Formalizar criterios y/o framework antes de producir.</p>
-                <div class="steps">
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 1 — Marco del día: Crear -> Criticar -> Refinar</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 5. Introduce el ciclo "Crear -> Criticar -> Refinar" y los conceptos de "Prompt Chaining" y "Self-Critique".</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Hoy implementaremos un ciclo fundamental en el desarrollo de cualquier producto: Crear, Criticar y Refinar. La IA será nuestro editor. Utilizaremos 'Prompt Chaining', es decir, encadenar prompts para que la IA actúe como un crítico y luego como un reescritor. Este marco agrega valor al automatizar la fase de revisión y mejora. Eviten prompts vagos o no basarse en la crítica de la IA. Usen prompts específicos para guiar la edición.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 2 — Mini-demostración del ciclo</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 6. Construye en vivo un ejemplo mínimo del ciclo: borrador, prompt de crítica, crítica de IA, prompt de refinamiento, resultado refinado.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Observen este ejemplo. Primero, un borrador simple. Luego, le pedimos a Xolo: "Actúa como un editor de estilo. Critica este párrafo para mejorar su claridad y concisión." Xolo nos da su crítica. Finalmente, le decimos: "Basado en tu crítica anterior, reescribe el párrafo para que sea más claro y conciso." ¿Ven cómo la crítica de Xolo fue útil? ¿La reescritura mejoró el texto original?</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 3 — Check rápido</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 7. 2 ítems de verificación (criterio o par de definiciones clave).</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Pregunta rápida: ¿Cuál es el propósito del "Prompt Chaining" en este contexto? Y, ¿por qué es importante que la crítica de la IA sea específica y accionable?</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="activity-card" id="activity-4">
-                <h2 class="activity-title">Brain Spark</h2>
-                <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto aplicando el marco del AI GYM.</p>
-                <div class="steps">
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 1 — Producción del borrador y crítica inicial</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 8. Generen un borrador (ensayo, trama, misión de empresa, etc.) y luego pidan a la IA que lo critique. Tiempo de trabajo autónomo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">N/A</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 2 — Iteración y refinamiento</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 9. Basándose en la crítica de la IA, pidan a la IA que refine el borrador. Asegúrense de que el refinamiento aborde los puntos señalados.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Antes de cerrar: valida que el refinamiento mejoró significativamente el borrador inicial. ¿La crítica de la IA fue específica y accionable? ¿El resultado final es de mayor calidad que el borrador original? Si no es así, ajusta tus prompts y vuelve a probar.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 3 — Evidencia del proceso</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 10. Soliciten la entrega del borrador inicial, los prompts y respuestas de crítica, y la versión final refinada.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Sube al canal indicado tu "expediente de edición": el borrador inicial, el diálogo con la IA (prompts de crítica y refinamiento, y sus respuestas), y la versión final refinada. Nombra tu archivo: M13_CriticaIA_[TuNombre].</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="activity-card" id="activity-5">
-                <h2 class="activity-title">GNIUS STORM</h2>
-                <p class="activity-purpose">Exhibición breve, síntesis y conexión profesional.</p>
-                <div class="steps">
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
-                            <p class="step-instructions">2–3 equipos/personas muestran evidencia clave (30–45 s c/u).</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Describan en 30 segundos: ¿Cuál fue el mayor impacto de la crítica de la IA en su borrador? ¿Qué mejora específica lograron gracias a este proceso?</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="step-card">
-                        <div class="step-content">
-                            <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
-                            <p class="step-instructions">Proyectar Diapositiva 11. Redacta síntesis: (a) 1 aprendizaje clave, (b) 1 criterio de calidad que marcó la diferencia, (c) siguiente paso aplicable fuera del aula.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Síntesis: Hoy aprendimos que la IA no solo genera, sino que eleva la calidad de nuestro trabajo a través de la crítica y el refinamiento iterativo. El criterio clave que marcó la diferencia fue la especificidad de los prompts de crítica. Como siguiente paso, apliquen esta metodología en sus próximos trabajos escritos o proyectos, usando la IA como su editor personal para pulir sus ideas y presentaciones.</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
+            </div>
         </main>
     </div>
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
